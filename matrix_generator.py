@@ -10,7 +10,15 @@ class MatrixGenerator:
     def random_matrix(self):
         matrix_1 = np.array([[random() for _ in range(self.nb_moves)] for _ in range(self.nb_moves)])
         matrix_2 = np.array([[random() for _ in range(self.nb_moves)] for _ in range(self.nb_moves)])
-        return matrix_1, matrix_2
+        
+        np.random.rand(size,size), np.random.rand(size, size)
+
+        matrix = [[(1, 4), (2, 5)], [(3, 6), (4, 7)]]
+
+        return matrix
+
+
+
 
     def nb_lemke_howson_labels(self):
         ex, _ = self.random_matrix()

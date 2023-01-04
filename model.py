@@ -68,5 +68,5 @@ class Model:
         agentModifiedPayOffMatrix = agentPayoffMatrix + attitudeAgent * opponentPayoffMatrix.T
         opponentModifiedPayOffMatrix = opponentPayoffMatrix + attitudeOpponent * agentPayoffMatrix.T
 
-        return NormalFormGame(agentModifiedPayOffMatrix, opponentModifiedPayOffMatrix)
+        return NormalFormGame((Player(agentModifiedPayOffMatrix), Player(opponentModifiedPayOffMatrix)))
 

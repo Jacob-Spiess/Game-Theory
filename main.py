@@ -11,13 +11,13 @@ def main():
     nb_moves = 2
 
     model = Model(n, r, err_lvls, nb_moves, f_ab, f_nash)
-    A, B = model.matrix.random_matrix()
+#    A, B = model.matrix.random_matrix()
 
-    A, B = np.array([[1,2],[3,4]]), np.array([[5,6],[7,8]])
-    normalFormGame = NormalFormGame(A, B)
+    A = [[(1, 4), (2, 5)], [(3, 6), (4, 7)]]
+    normalFormGame = NormalFormGame(A)
     print(normalFormGame)
 
-    print(model.modify_game(-1,0,normalFormGame))
+    print(model.modify_game(-1,1,normalFormGame))
 
 
 
